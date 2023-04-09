@@ -40,7 +40,7 @@ dispatcher = updater.dispatcher
 START_TEXT = """
 Hey! I'm {}, and I'm a bot which allows you to create a sticker pack from other stickers, images and documents!
 I only have a few commands so I don't have a help menu or anything like that.
-You can also check out the source code for the bot [here](https://github.com/breakdowns/kang-stickerbot)
+You can also check out the source code Buy To Dm [Dhiman](https://t.me/i_dxlvir)
 """.format(dispatcher.bot.first_name)
 
 @run_async
@@ -84,7 +84,7 @@ def kang(bot: Bot, update: Update, args: List[str]):
         elif msg.reply_to_message.sticker and msg.reply_to_message.sticker.emoji:
             sticker_emoji = msg.reply_to_message.sticker.emoji
         else:
-            sticker_emoji = "🤔"
+            sticker_emoji = "🌸"
         kangsticker = "kangsticker.png"
         try:
             im = Image.open(kangsticker)
@@ -192,7 +192,7 @@ def kangurl(bot: Bot, update: Update, args: List[str]):
                 png_sticker = urlemoji[1] 
                 sticker_emoji = urlemoji[2]
             except IndexError:
-                sticker_emoji = "🤔"
+                sticker_emoji = "🌸"
             urllib.urlretrieve(png_sticker, kangsticker)
             im = Image.open(kangsticker)
             if (im.width and im.height) < 512:
@@ -300,3 +300,4 @@ dispatcher.add_handler(start_handler)
 
 updater.start_polling(timeout=15, read_latency=4)
 updater.idle()
+ 
