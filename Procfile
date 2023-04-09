@@ -1,1 +1,1 @@
-worker: python kang.py
+worker: python3 kang.py
